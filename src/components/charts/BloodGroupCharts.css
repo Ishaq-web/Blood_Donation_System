@@ -1,0 +1,122 @@
+/* =========================================
+   BLOOD GROUP CHART CARD
+========================================= */
+
+.blood-group-chart {
+  width: 100%;
+  max-width: 386px;
+  min-width: 0;
+  min-height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT SIDE - BLOOD GROUPS
+========================================= */
+
+.blood-groups {
+  width: 75px;
+  min-width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+
+
+/* =========================================
+   BLOOD GROUP ITEM
+========================================= */
+
+.blood-group-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   COLOR ICON
+========================================= */
+
+.blood-group-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  display: block;
+
+  /* border-radius: 50%; */
+}
+
+
+/* =========================================
+   BLOOD GROUP TEXT
+========================================= */
+
+.blood-group-name {
+  color: #201f31;
+
+  font-family: "Baloo 2", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   RIGHT SIDE - DONUT
+========================================= */
+
+.blood-group-donut {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .blood-group-chart {
+    max-width: 100%;
+    padding: 14px;
+    gap: 5px;
+  }
+
+  .blood-groups {
+    width: 65px;
+    min-width: 65px;
+    gap: 12px;
+  }
+
+  .blood-group-name {
+    font-size: 12px;
+  }
+
+  .blood-group-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+  }
+
+}

@@ -4,23 +4,25 @@ import UserGrowthChart from "../components/charts/UserGrowthCharts";
 import Header from "../components/header/Header";
 import Sidebar from "../components/sidebar/Sidebar";
 
+import "./DashboardLayout.css";
+
 function DashboardLayout() {
   return (
     <>
-      <div className="flex min-h-screen bg-[#F5F5F7] gap-4 p-4">
+      <div className="dashboard-container">
         {/* Sidebar */}
         <Sidebar />
 
         {/* Right Side */}
-        <div className="flex-1">
+        <div className="dashboard-header-content">
           {/* Header */}
           <Header />
 
           {/* Page Content */}
-          <main className="mt-8">
+          <main className="dashboard-main-content">
             <Cards />
 
-            <div className="flex mt-20 items-center">
+            <div className="dashboard-charts">
               <UserGrowthChart />
               <BloodGroupChart />
             </div>

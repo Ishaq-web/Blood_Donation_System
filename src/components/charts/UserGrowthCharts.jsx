@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Chart } from "react-google-charts";
 import UserGrowthCharts from "../../context/UserGrowthCharts";
+import "./UserGrowthCharts.css";
 
 function UserGrowthChart() {
   const [period, setPeriod] = useState("daily");
@@ -9,49 +10,35 @@ function UserGrowthChart() {
   const chartData = UserGrowthCharts[period];
 
   return (
-    <div className="rounded-[28px] bg-white p-6 w-[720px] h-[400px]">
+    <div className="user-growth-chart">
       {/* Header */}
-      <div className="flex justify-between">
+      <div className="user-growth-header">
         {/* Title */}
-        <div className="flex items-center gap-1">
+        <div className="user-growth-title">
           <span>Users Growth</span>
 
-          <h4 className="text-2xl font-bold">
-            ({UserGrowthCharts.totalUsers})
-          </h4>
+          <h4>({UserGrowthCharts.totalUsers})</h4>
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-2 w-[221px] h-[48px] bg-[#96969694] rounded-[991px] p-1">
+        <div className="user-growth-buttons">
           <button
             onClick={() => setPeriod("daily")}
-            className={`w-[83px] h-[32px] rounded-[99px] p-2 ${
-              period === "daily"
-                ? "bg-[#C62828] text-white"
-                : "hover:bg-[#C62828] hover:text-white"
-            }`}
+            className={period === "daily" ? "active" : ""}
           >
             Daily
           </button>
 
           <button
             onClick={() => setPeriod("monthly")}
-            className={`w-[83px] h-[32px] rounded-[99px] p-2 ${
-              period === "monthly"
-                ? "bg-[#C62828] text-white"
-                : "hover:bg-[#C62828] hover:text-white"
-            }`}
+            className={period === "monthly" ? "active" : ""}
           >
             Monthly
           </button>
 
           <button
             onClick={() => setPeriod("yearly")}
-            className={`w-[83px] h-[32px] rounded-[99px] p-2 ${
-              period === "yearly"
-                ? "bg-[#C62828] text-white"
-                : "hover:bg-[#C62828] hover:text-white"
-            }`}
+            className={period === "yearly" ? "active" : ""}
           >
             Yearly
           </button>

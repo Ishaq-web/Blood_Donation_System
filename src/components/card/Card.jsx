@@ -1,30 +1,22 @@
 import DashboardStats from "../../context/DashboardStats";
+import "./Cards.css";
 
 function Cards() {
   return (
-    <div className="grid grid-cols-4 gap-x-[16px] gap-y-[24px] w-[968px] h-[300px]">
+    <div className="Dashboard-cards">
       {DashboardStats.map((item) => (
-        <div
-          key={item.id}
-          className="w-[224px] h-[142px] rounded-[28px] border-gray-200 bg-white p-5"
-        >
+        <div key={item.id} className="card">
           {/* Title */}
-          <h4 className="text-sm font-medium text-gray-500">
-            {item.totalUsers}
-          </h4>
+          <h4 className="card-title">{item.totalUsers}</h4>
 
           {/* Value */}
-          <h2 className="mt-2 text-2xl font-bold text-gray-900">
-            {item.userValue}
-          </h2>
+          <h2 className="card-value">{item.userValue}</h2>
 
           {/* Changes + Subtitle */}
-          <div className="mt-3 flex items-center gap-2">
-            <span className="text-sm font-semibold text-green-600">
-              {item.changes}
-            </span>
+          <div className="card-changes">
+            <span className="card-changes-value">{item.changes}</span>
 
-            <span className="text-xs text-gray-500">{item.subtitle}</span>
+            <span className="card-changes-text">{item.subtitle}</span>
           </div>
         </div>
       ))}

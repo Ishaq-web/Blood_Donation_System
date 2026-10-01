@@ -1,0 +1,221 @@
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER TITLE
+========================================= */
+
+.header-title {
+  color: #201f31;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 100%;
+}
+
+
+/* =========================================
+  HEADER CONTROLS
+========================================= */
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.header-dropdown {
+  position: relative;
+  width: 148px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* Select */
+.form-select {
+  width: 100%;
+  height: 100%;
+  padding: 0 38px 0 5px;
+  border: 1px solid black;
+  border-radius: 99px;
+  background-color: #ffffff;
+  color: #201f31;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+  NOTIFICATION / BADGE ICON
+========================================= */
+
+.header-badge-icon {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.header-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.header-profile-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.header-profile-name {
+  color: #201f31;
+
+  font-family: "Baloo 2", sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.header-profile:hover .header-profile-name {
+  color: #c62828;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .header {
+    height: 72px;
+    padding: 0 20px;
+  }
+
+  .header-controls {
+    gap: 14px;
+  }
+
+  .header-title {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    height: auto;
+    min-height: 70px;
+
+    padding: 12px 16px;
+
+    gap: 12px;
+  }
+
+  .header-title {
+    font-size: 19px;
+  }
+
+  .header-controls {
+    gap: 10px;
+  }
+
+  .header-dropdown {
+    width: 110px;
+  }
+
+  .form-select {
+    height: 36px;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  .header-badge-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-profile-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-profile-name {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .header-title {
+    font-size: 17px;
+  }
+
+  .header-dropdown {
+    width: 95px;
+  }
+
+  .header-controls {
+    gap: 8px;
+  }
+
+}

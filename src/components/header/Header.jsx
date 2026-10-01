@@ -1,35 +1,33 @@
 import profile from "../../assets/profile.png";
 import wadget from "../../assets/wadget.png";
 
+import "./Header.css";
+
 function Header() {
   return (
-    <header className="flex items-center justify-between px-6 py-4">
+    <header className="header">
       <div>
-        <h2 className="font-baloo font-semibold text-[35px] text-center">
-          Blood Donation
-        </h2>
+        <h2 className="header-title">Blood Donation</h2>
       </div>
 
-      <div className="flex items-center justify-between gap-4">
-        <select
-          name=""
-          id=""
-          className="w-[163px] h-[48px] rounded-[99px] bg-[#FFFFFF] border-[1px] p-2 mr-8"
-        >
-          <option value="month">This month</option>
-          <option value="year">This year</option>
-        </select>
+      <div className="header-controls">
+        <div className="header-dropdown">
+          <select name="" id="" className="form-select">
+            <option value="month" className="option">
+              This month
+            </option>
+            <option value="year" className="option">
+              This year
+            </option>
+          </select>
+        </div>
 
         <div>
-          <img
-            src={wadget}
-            alt=""
-            className="w-[35px] h-[35px] rounded-[50%]"
-          />
+          <img src={wadget} alt="" className="header-badge-icon" />
         </div>
-        <div className="flex items-center gap-2 mr-20">
-          <img src={profile} alt="" className="w-[32px] h-[33px]" />
-          <span className="text-[16px] font-medium">Muhammad Ali</span>
+        <div className="header-profile">
+          <img src={profile} alt="" className="header-profile-icon" />
+          <span className="header-profile-name">Muhammad Ali</span>
         </div>
       </div>
     </header>
