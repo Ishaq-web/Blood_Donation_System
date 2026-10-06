@@ -17,7 +17,7 @@ function UserGrowthChart() {
         <div className="user-growth-title">
           <span>Users Growth</span>
 
-          <h4>({UserGrowthCharts.totalUsers})</h4>
+          <h5>({UserGrowthCharts.totalUsers})</h5>
         </div>
 
         {/* Buttons */}

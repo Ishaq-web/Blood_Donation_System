@@ -1,0 +1,26 @@
+
+
+.hopital-bloodbank-card {
+  padding: 24px 0px 0px 38px;
+  border: 1px solid #979696;
+  border-radius: 28px;
+  width: 393px;
+  height: 291px;
+  display: block;
+  font-family: "baloo 2";
+  margin-top: 30px;
+  background-color: #ffffff;
+}
+
+.hopital-bloodbank-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 400px;
+  font-family: "baloo 2";
+  padding-bottom: 10px;
+}

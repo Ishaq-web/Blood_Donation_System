@@ -1,0 +1,60 @@
+
+/* Donor-verification-card  */
+
+
+.donor-verification-title {
+  font-family: "baloo 2";
+  font-size: 24px;
+  font-weight: 600px;
+}
+.donor-verification-card {
+  width: 393px;
+  height: 291px;
+  border: 1px solid #979696;
+  border-radius: 28px;
+  padding: 24px 0px 0px 38px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  margin-left: 300px;
+}
+
+.donor-verication-prifile-frame {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.donor-verication-prifile-frame img {
+  width: 32px;
+  height: 33px;
+}
+.donor-verication-prifile-frame span {
+  font-size: 16px;
+  font-weight: 500px;
+  font-family: "baloo 2";
+}
+
+.donor-verification-blood {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  margin-top: 20px;
+}
+.donor-verification-blood span {
+  font-size: 18px;
+  font-weight: 400px;
+  font-family: "baloo 2";
+}
+
+.donor-verification-submition {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+.donor-verification-submition span {
+  font-size: 18px;
+  font-weight: 400px;
+  font-family: "baloo 2";
+}

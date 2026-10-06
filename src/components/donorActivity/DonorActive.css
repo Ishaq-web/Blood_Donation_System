@@ -1,0 +1,65 @@
+
+
+.donor-activity-card {
+  /* background: #fdfcf6; */
+  border-radius: 22px;
+  padding: 20px 24px;
+  max-width: 450px;
+  font-family: "baloo";
+}
+
+.vertical-chart-section {
+  display: flex;
+  gap: 30px;
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  font-family: "baloo 2";
+  /* margin-bottom: 18px; */
+  margin-top: 20px;
+}
+
+/* --- Vertical Bars --- */
+.vertical-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  height: 200px;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.v-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* flex: 1; */
+}
+
+.v-bar-track {
+  width: 10px;
+  height: 160px;
+  background: #e5e1d8;
+  border-radius: 999px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.v-bar-fill {
+  width: 100%;
+  background: #2D28C6;
+  border-radius: 999px;
+  transition: height 0.8s ease;
+}
+
+.v-bar-label {
+  font-size: 11px;
+  color: #8a8a8a;
+}
+

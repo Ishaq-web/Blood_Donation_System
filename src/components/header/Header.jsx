@@ -7,18 +7,18 @@ function Header() {
   return (
     <header className="header">
       <div>
-        <h2 className="header-title">Blood Donation</h2>
+        <h2 className="header-title">Dashboard</h2>
       </div>
 
       <div className="header-controls">
-        <div className="header-dropdown">
-          <select name="" id="" className="form-select">
-            <option value="month" className="option">
-              This month
+        <div class="select-wrapper">
+          <select class="custom-select">
+            <option selected disabled>
+              Select Status
             </option>
-            <option value="year" className="option">
-              This year
-            </option>
+            <option value="active">This Day</option>
+            <option value="blocked">This Month</option>
+            <option value="pending">This Year</option>
           </select>
         </div>
 

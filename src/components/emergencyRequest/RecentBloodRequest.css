@@ -1,0 +1,59 @@
+
+
+.recent-blood-card {
+  background: #ffffff;
+  border: 1px solid #979696;
+  border-radius: 28px;
+  padding: 18px 20px 10px 20px;
+  width: 393px;
+  height: 350px;
+}
+
+.recent-blood-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.recent-blood-title {
+  width: 121px;
+  height: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+  font-family: "baloo 2";
+}
+
+.recent-blood-tabs {
+  width: 174px;
+  height: 40px;
+  border-radius: 99px;
+  background:  #0E0E0E0A;
+  border-radius: 99px;
+  padding: 2px;
+  display: flex;
+  gap: 4px;
+}
+
+.tab {
+  border: none;
+  background: transparent;
+  padding: 8px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-family: "baloo 2";
+  color: #666;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #0A2342;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "baloo 2";
+}
+
+.chart-wrapper {
+  width: 100%;
+}

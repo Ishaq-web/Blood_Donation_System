@@ -31,6 +31,7 @@
   width: 100%;
   padding: 24px;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
 
@@ -43,7 +44,7 @@
   display: flex;
   align-items: stretch;
   gap: 24px;
-  margin-top: 24px;
+  margin-top: 70px;
 }
 
 
@@ -68,4 +69,46 @@
 .dashboard-charts > :last-child {
   width: 386px;
   flex-shrink: 0;
+}
+
+
+
+/* Emergency-frame styleing  */
+
+.Emergency-frame {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 70px;
+}
+.Emergency-request-section {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+
+/* Donor-Activity-section  */
+
+.Donor-Activity-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: space-between;
+  width: 100%;
+}
+
+
+
+/* blood-bank-section  */
+.blood-bank-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* total-recent-charity  */
+.total-recent-charity {
+  margin-top: 50px;
 }

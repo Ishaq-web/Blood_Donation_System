@@ -1,0 +1,36 @@
+
+
+/* --- Horizontal Bars --- */
+.horizontal-chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.h-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.blood-type {
+  font-size: 50px;
+  font-weight: 600;
+  color: #000000;
+  font-family: "baloo 2";
+  width: 40px;
+}
+
+.h-bar-track {
+  width: 458px;
+  height: 52px;
+  border: 1px solid #979696;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.h-bar-fill {
+  height: 100%;
+  transition: width 0.8s ease;
+}
