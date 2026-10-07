@@ -1,0 +1,209 @@
+/* =========================================
+   USERS MANAGEMENT MAIN LAYOUT
+========================================= */
+
+.users-management {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f7f8fa;
+  position: fixed;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.users-management > section {
+  margin: 14px 14px 14px 255px;
+
+  width: calc(100% - 269px);
+  min-height: calc(100vh - 28px);
+
+  box-sizing: border-box;
+
+  border: 1px solid black;
+  background-color: #ffffff;
+  border-radius: 40px;
+}
+
+.users-management-content {
+  width: 100%;
+  padding: 27px 24px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.users-management-content-header {
+  width: 100%;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.users-management-content-title {
+  margin: 0;
+
+  color: #000000;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+
+/* =========================================
+   SEARCH + FILTER
+========================================= */
+
+.users-management-content-search {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  margin-left: auto;
+}
+
+
+/* =========================================
+   SEARCH INPUT WRAPPER
+========================================= */
+
+.users-management-content-search-input-wrapper {
+  width: 320px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  background-color: #ffffff;
+  border: 1px solid #0E0E0E;
+  border-radius: 99px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.header-search-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+.users-management-content-search-input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 0 8px;
+
+  background: transparent;
+
+  color: #000000;
+  font-family: "Baloo 2";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.users-management-content-search-input::placeholder {
+  color: #000000;
+}
+
+
+/* =========================================
+   FILTER SELECT
+========================================= */
+
+.users-management-content-search-select {
+  width: 163px;
+  height: 48px;
+
+  padding: 0 12px;
+
+  border: 1px solid #000000;
+  border-radius: 99px;
+
+  background-color: #ffffff;
+
+  color: #555555;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 14px;
+
+  outline: none;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   PROFILE AREA
+========================================= */
+
+.users-management-content-header > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-left: 24px;
+}
+
+
+/* Widget icon */
+
+.users-management-content-header > div:last-child img:first-child {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+
+/* Profile image */
+
+.users-management-content-header > div:last-child img:nth-child(2) {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* =========================================
+  PROFILE NAME
+========================================= */
+
+.users-management-content-profile-name {
+  color: #000000;
+
+  font-family: "Baloo 2";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+
+  white-space: nowrap;
+}

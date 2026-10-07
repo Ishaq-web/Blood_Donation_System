@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
+import UserManagement from "../pages/users/Users";
+import DonorsManagement from "../pages/donors/Donors";
 
 function AppRoutes() {
   return (
@@ -8,8 +10,8 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<DashboardLayout />} />
 
-          <Route path="/Users" element={<h1>Users</h1>} />
-          <Route path="/donors" element={<h1>donors</h1>} />
+          <Route path="/Users" element={<UserManagement />} />
+          <Route path="/donors" element={<DonorsManagement />} />
           <Route path="/hospitals" element={<h1>hospitals</h1>} />
           <Route path="/setting" element={<h1>setting</h1>} />
           <Route path="/logout" element={<h1>logout</h1>} />

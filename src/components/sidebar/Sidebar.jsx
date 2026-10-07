@@ -15,17 +15,32 @@ function Sidebar() {
         </div>
 
         <nav className="sidebar-nav">
-          <NavLink to="/" className="dashboard-nav-link">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `dashboard-nav-link ${isActive ? "active" : ""}`
+            }
+          >
             <img src={dashboardicon} alt="" className="dashboard-img-logo" />
             <span className="sidebar-nav-text">Dashboard</span>
           </NavLink>
 
-          <NavLink to="/users" className="usermanagement-nav-link">
+          <NavLink
+            to="/users"
+            className={({ isActive }) =>
+              `usermanagement-nav-link ${isActive ? "active" : ""}`
+            }
+          >
             <img src={usersicon} alt="" className="usermanagement-img-logo" />
             <span className="usermanagement-nav-text">Users Management</span>
           </NavLink>
 
-          <NavLink to="/donors" className="donors-nav-link">
+          <NavLink
+            to="/donors"
+            className={({ isActive }) =>
+              `donors-nav-link ${isActive ? "active" : ""}`
+            }
+          >
             <img src={usersicon} alt="" className="donors-img-logo" />
             <span className="donors-nav-text">Donors Management</span>
           </NavLink>

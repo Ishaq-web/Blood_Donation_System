@@ -14,7 +14,7 @@ function Header() {
         <div class="select-wrapper">
           <select class="custom-select">
             <option selected disabled>
-              Select Status
+              Select status
             </option>
             <option value="active">This Day</option>
             <option value="blocked">This Month</option>

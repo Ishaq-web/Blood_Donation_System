@@ -1,0 +1,10 @@
+
+
+.donors-management {
+  display: flex;
+  gap: 16px;
+}
+
+.donors-management-content {
+  padding-top: 16px;
+}
