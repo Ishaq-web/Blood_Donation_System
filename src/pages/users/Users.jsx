@@ -3,6 +3,9 @@ import profile from "../../assets/profile.png";
 import wadget from "../../assets/wadget.png";
 import search from "../../assets/searchicon.png";
 import "./Users.css";
+import UserCards from "../../components/usercards/UserCards";
+import UserDropDown from "../../components/usercards/UserDropDown";
+import UserList from "../../components/usercards/UserList";
 
 function UserManagement() {
   return (
@@ -51,6 +54,21 @@ function UserManagement() {
                 </span>
               </div>
             </div>
+
+            {/* Users Cards section */}
+            <section className="usercards-section">
+              <UserCards />
+            </section>
+
+            {/* User Drop Down section  */}
+            <section className="user-drop-down-section">
+              <UserDropDown />
+            </section>
+
+            {/* User List section  */}
+            <section className="user-drop-down-section">
+              <UserList />
+            </section>
           </div>
         </section>
       </div>
