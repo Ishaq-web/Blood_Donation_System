@@ -1,64 +1,91 @@
 
 .user-list {
-  width: 1033px;
-  min-height: 488px;
-  /* border: 1px solid black; */
+  width: 100%;
+  height: 200px;
+  max-height: 488px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* user list header  */
-
+/* User list header */
 .list-header {
   font-family: "baloo 2";
   display: flex;
-  justify-content: space-around;
-  /* width: 900px; */
+  /* justify-content: space-between; */
+  /* flex-shrink: 0; */
 }
 
 .list-header span {
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
   font-size: 18px;
   line-height: 120%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .user-list-item {
   width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 }
+
+/* Icons */
 .eye-header-icon {
   appearance: none;
 }
+
 .delete-header-icon {
   appearance: none;
 }
 
-/* user list content  */
+/* Checkbox */
+.id-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000000;
+  border-radius: 9px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
 
+/* User list content */
 .user-list-display {
   width: 100%;
-  height: 64px;
+  min-height: 64px;
+  box-sizing: border-box;
   border: 1px solid gray;
   border-radius: 18px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
   margin-top: 20px;
-  padding-top: 20px;
+  flex-shrink: 0;
 }
-.user-list-display span{
+
+.user-list-display span {
   font-size: 18px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
   font-family: "baloo 2";
 }
 
 .eye-icon {
   width: 16px;
-  float: left;
-  margin-right: 8px;
   height: 16px;
+  margin-right: 8px;
 }
 
 .delete-icon {
   width: 16px;
-  float: left;
   height: 16px;
 }
-

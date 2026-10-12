@@ -22,13 +22,76 @@ function UserList() {
       joined: "Aug 20",
       status: "Active",
     },
+    {
+      id: 3,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
+    {
+      id: 4,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
+    {
+      id: 5,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
+    {
+      id: 6,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
+    {
+      id: 7,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
+    {
+      id: 8,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
+    {
+      id: 9,
+      name: "Muhammad Waqas",
+      blood_group: "A+",
+      location: "Peshawar",
+      verified: "Verified",
+      joined: "Aug 20",
+      status: "Active",
+    },
   ];
   return (
     <>
       <div className="user-list">
         <div className="list-header">
           <span>
-            <input type="checkbox" /> ID
+            <input type="checkbox" className="id-checkbox" /> ID
           </span>
           <span>Name</span>
           <span>Blood Group</span>
@@ -47,7 +110,7 @@ function UserList() {
             return (
               <div key={user.id} className="user-list-display">
                 <span>
-                  <input type="checkbox" />
+                  <input type="checkbox" className="id-checkbox" />
                   {user.id}
                 </span>
                 <span>{user.name}</span>
