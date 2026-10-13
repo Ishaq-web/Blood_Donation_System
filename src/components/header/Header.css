@@ -42,30 +42,99 @@
 
 
 /* =========================================
-   DROPDOWN
+  DROPDOWN
 ========================================= */
 
+
 .select-wrapper {
-  position: relative;
   width: 163px;
   height: 48px;
-  border: 1px solid black;
-  border-radius: 99px;
-  background: white;
-  margin-right: 50px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 8px;
   display: flex;
   align-items: center;
+  border: 1px solid #000000;
+  border-radius: 99px;
+  background-color: #ffffff;
+  font-family: "Baloo 2";
+  margin-right: 45px;
 }
 
+/* Dropdown button */
 .custom-select {
-  padding: 12px 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Baloo 2";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  font-weight: 500;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+}
+
+/* Arrow */
+.dropdown-arrow {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-right: 1.5px solid #201f1f;
+  border-bottom: 1.5px solid #201f1f;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(225deg);
+  margin-top: 4px;
+}
+
+/* Popup */
+.custom-dropdown-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: -1px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  z-index: 9999;
+}
+
+/* Options */
+.custom-dropdown-option {
+  display: block;
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 9px;
+  background-color: transparent;
+  color: #201f1f;
   font-family: "Baloo 2";
   font-size: 14px;
+  font-weight: 400;
+  text-align: left;
   cursor: pointer;
-  outline: none;
+}
+
+.custom-dropdown-option:hover {
+  background-color: #f0f0f5;
+}
+
+.custom-dropdown-option.selected {
+  background-color: #eeeeF5;
 }
 
 
@@ -74,15 +143,15 @@
 ========================================= */
 
 .header-badge-icon {
-  width: 27px;
-  height: 27px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   cursor: pointer;
 }
 
 
 /* =========================================
-   PROFILE
+  PROFILE
 ========================================= */
 
 .header-profile {
@@ -93,8 +162,8 @@
 }
 
 .header-profile-icon {
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
 }

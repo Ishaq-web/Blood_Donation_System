@@ -27,7 +27,7 @@
 
 
 /* =========================================
-   LOGO
+  LOGO
 ========================================= */
 
 .sidebar-logo {
@@ -90,6 +90,7 @@
   font-weight: 500;
   line-height: 100%;
   /* margin-left: 20px; */
+  padding-left: 15px;
 }
 .dashboard-nav-link.active {
   background-color: #F68989;
@@ -108,6 +109,7 @@
   font-weight: 600;
   font-family: "Baloo 2";
   line-height: 100%;
+  padding-top: 4px;
 }
 
 
@@ -119,7 +121,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-left: 4px;
+  padding-left: 15px;
 }
 .usermanagement-nav-link.active {
   background-color: #F68989;
@@ -142,6 +144,7 @@
   font-weight: 600;
   font-family: "Baloo 2";
   line-height: 100%;
+  padding-top: 4px;
 }
 
 
@@ -153,7 +156,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-left: 4px;
+  padding-left: 15px;
 }
 .donors-nav-link.active {
   background-color: #F68989;
@@ -176,6 +179,7 @@
   font-weight: 600;
   font-family: "Baloo 2";
   line-height: 100%;
+  padding-top: 4px;
 }
 
 

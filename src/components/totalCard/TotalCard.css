@@ -21,10 +21,10 @@
 }
 
 .stat-card, .blood-fund-card {
-  padding: 18px 20px;
+  /* padding: 10px 20px; */
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 
   width: 224px;
   height: 142px;

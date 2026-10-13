@@ -1,9 +1,32 @@
+import { useState, useRef, useEffect } from "react";
+
 import profile from "../../assets/profile.png";
 import wadget from "../../assets/wadget.png";
 
 import "./Header.css";
 
 function Header() {
+  const [selected, setSelected] = useState("Select status");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  const options = ["This Day", "This Month", "This Year"];
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="header">
       <div>
@@ -11,23 +34,46 @@ function Header() {
       </div>
 
       <div className="header-controls">
-        <div class="select-wrapper">
-          <select class="custom-select">
-            <option selected disabled>
-              Select status
-            </option>
-            <option value="active">This Day</option>
-            <option value="blocked">This Month</option>
-            <option value="pending">This Year</option>
-          </select>
+        {/* Custom Dropdown */}
+        <div className="select-wrapper" ref={dropdownRef}>
+          <button
+            type="button"
+            className="custom-select"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-expanded={isOpen}
+          >
+            <span>{selected}</span>
+
+            <span className={`dropdown-arrow ${isOpen ? "rotate" : ""}`} />
+          </button>
+
+          {isOpen && (
+            <div className="custom-dropdown-options">
+              {options.map((option) => (
+                <button
+                  type="button"
+                  key={option}
+                  className={`custom-dropdown-option ${
+                    selected === option ? "selected" : ""
+                  }`}
+                  onClick={() => {
+                    setSelected(option);
+                    setIsOpen(false);
+                  }}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <div>
           <img src={wadget} alt="" className="header-badge-icon" />
         </div>
+
         <div className="header-profile">
-          <img src={profile} alt="" className="header-profile-icon" />
-          <span className="header-profile-name">Muhammad Ali</span>
+          <img src={profile} alt="Profile" className="header-profile-icon" />
         </div>
       </div>
     </header>

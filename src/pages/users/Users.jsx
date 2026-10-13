@@ -7,7 +7,29 @@ import UserCards from "../../components/usercards/UserCards";
 import UserDropDown from "../../components/usercards/UserDropDown";
 import UserList from "../../components/usercards/UserList";
 
+import { useState, useRef, useEffect } from "react";
+
 function UserManagement() {
+  const [selected, setSelected] = useState("Monthly");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  const options = ["Monthly", "Yearly", "Weekly"];
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <div className="users-management">
@@ -32,26 +54,49 @@ function UserManagement() {
                   />
                 </div>
 
-                <div>
-                  <select
-                    name=""
-                    id=""
-                    className="users-management-content-search-select"
+                {/* drop down  */}
+                <div
+                  className="users-management-content-drop-down"
+                  ref={dropdownRef}
+                >
+                  <button
+                    type="button"
+                    className="users-management-content-dropdown-select"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-expanded={isOpen}
                   >
-                    <option value="">Filter by status</option>
-                    <option value="active">Active</option>
-                    <option value="blocked">Blocked</option>
-                    <option value="pending">Pending</option>
-                  </select>
+                    <span>{selected}</span>
+
+                    <span
+                      className={`dropdown-arrow ${isOpen ? "rotate" : ""}`}
+                    />
+                  </button>
+
+                  {isOpen && (
+                    <div className="custom-dropdown-options">
+                      {options.map((option) => (
+                        <button
+                          type="button"
+                          key={option}
+                          className={`custom-dropdown-option ${
+                            selected === option ? "selected" : ""
+                          }`}
+                          onClick={() => {
+                            setSelected(option);
+                            setIsOpen(false);
+                          }}
+                        >
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div>
-                <img src={wadget} alt="" />
+                <img src={wadget} alt="" className="users-badge-icon" />
                 <img src={profile} alt="" />
-                <span className="users-management-content-profile-name">
-                  Awais Khan
-                </span>
               </div>
             </div>
 
