@@ -116,8 +116,7 @@ function UserManagement() {
             </section>
           </div>
         </section>
-      </div>{" "}
-      Ishaq
+      </div>
     </>
   );
 }
