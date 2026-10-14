@@ -32,7 +32,7 @@ function UserManagement() {
   }, []);
   return (
     <>
-      <div className="users-management">
+      <div className="users-management ">
         <Sidebar />
 
         <section>
@@ -96,6 +96,7 @@ function UserManagement() {
 
               <div>
                 <img src={wadget} alt="" className="users-badge-icon" />
+
                 <img src={profile} alt="" />
               </div>
             </div>

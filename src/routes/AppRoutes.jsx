@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import UserManagement from "../pages/users/Users";
 import DonorsManagement from "../pages/donors/Donors";
+import Profile from "../pages/profile/Profile";
 
 function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ function AppRoutes() {
           <Route path="/" element={<DashboardLayout />} />
 
           <Route path="/Users" element={<UserManagement />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/donors" element={<DonorsManagement />} />
           <Route path="/hospitals" element={<h1>hospitals</h1>} />
           <Route path="/setting" element={<h1>setting</h1>} />

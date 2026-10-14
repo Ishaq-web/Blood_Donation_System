@@ -1,8 +1,10 @@
 import "./UserList.css";
 import eyeicon from "../../assets/eyeicon.png";
 import deleteicon from "../../assets/deleteicon.png";
+import { useNavigate } from "react-router-dom";
 
 function UserList() {
+  const navigate = useNavigate();
   const User_list = [
     {
       id: 1,
@@ -120,7 +122,13 @@ function UserList() {
                 <span>{user.joined}</span>
                 <span>{user.status}</span>
                 <span className="Action-2">
-                  <img src={eyeicon} alt="" className="eye-icon" />
+                  <img
+                    src={eyeicon}
+                    alt=""
+                    className="eye-icon"
+                    onClick={() => navigate("/profile", { state: { user } })}
+                    style={{ cursor: "pointer" }}
+                  />
                   <img src={deleteicon} alt="" className="delete-icon" />
                 </span>
               </div>

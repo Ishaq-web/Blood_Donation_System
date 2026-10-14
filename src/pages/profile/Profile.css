@@ -1,0 +1,122 @@
+
+
+.profile-content-frame {
+  width: 250px;
+  height: 32px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.left-arrow-btn {
+  width: 32px;
+  height: 32px;
+  /* border: 1px solid rgb(173, 173, 173); */
+  background-color: #f0eeee;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.profile-content-title {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "baloo 2";
+  letter-spacing: 0;
+  line-height: 120%;
+}
+
+.profile-content-heading {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "baloo 2";
+  margin: 20px 20px;
+}
+
+/* profile card  */
+.profile-content-card {
+  width: 1093px;
+  height: 396px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+
+
+.profile-card-frame {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 25px;
+}
+
+.profile-card-frame > img {
+  width: 64px;
+  height: 64px;
+}
+
+.profile-card-frame-data {
+  display: flex;
+  flex-direction: column;
+}
+.profile-card-frame-data > span {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "baloo 2";
+}
+
+
+.profile-card-user-status {
+  width: 236px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 30px;
+}
+.profile-card-btn {
+  width: 112px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 99px;
+  font-family: "baloo 2";
+}
+.btn1-color {
+  background-color: #2D28C6;
+  color: white;
+}
+.btn2-color {
+  background-color: #C62828;
+  color: white;
+}
+
+.line-tag {
+  margin: 20px;
+}
+
+.profile-card-data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  width: 100%;
+  margin: 50px;
+}
+
+.profile-data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-data-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #777777;
+}
+
+.profile-data-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: #201f31;
+}
