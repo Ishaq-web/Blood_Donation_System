@@ -8,3 +8,32 @@
 .donors-management-content {
   padding-top: 16px;
 }
+
+
+.donor-management-dropdown {
+  margin-top: 20px;
+}
+
+
+.dropdown-wrapper {
+  position: relative;
+  width: 163px;
+}
+
+
+/* donor-heading-subtitle  */
+
+.usercards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.donor-statistic-subtitle {
+  font-size: 24px;
+  font-family: "baloo 2";
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
