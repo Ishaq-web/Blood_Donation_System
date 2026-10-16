@@ -3,6 +3,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import UserManagement from "../pages/users/Users";
 import DonorsManagement from "../pages/donors/Donors";
 import Profile from "../pages/profile/Profile";
+import DonorProfile from "../pages/donorProfile/DonorProfile";
 
 function AppRoutes() {
   return (
@@ -14,7 +15,7 @@ function AppRoutes() {
           <Route path="/Users" element={<UserManagement />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/donors" element={<DonorsManagement />} />
-          <Route path="/hospitals" element={<h1>hospitals</h1>} />
+          <Route path="/donorProfile" element={<DonorProfile />} />
           <Route path="/setting" element={<h1>setting</h1>} />
           <Route path="/logout" element={<h1>logout</h1>} />
         </Routes>

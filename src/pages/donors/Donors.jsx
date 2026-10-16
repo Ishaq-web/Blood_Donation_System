@@ -8,6 +8,7 @@ import UserDropDown from "../../components/usercards/UserDropDown";
 import UserList from "../../components/usercards/UserList";
 
 import { useState, useRef, useEffect } from "react";
+import DonorTable from "../../components/donorTable/DonorTable";
 
 function DonorManagemnt() {
   const [selected, setSelected] = useState("Monthly");
@@ -114,6 +115,13 @@ function DonorManagemnt() {
             <section className="user-drop-down-section">
               <UserDropDown />
             </section>
+          </div>
+
+          <div className="donor-table-section">
+            <span className="donor-table-title">All Chats</span>
+            <div>
+              <DonorTable />
+            </div>
           </div>
         </section>
       </div>

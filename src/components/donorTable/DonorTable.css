@@ -1,0 +1,92 @@
+
+
+.donor-table {
+  width: calc(100% - 40px);
+  max-width: none;
+  min-width: 0;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: "Baloo 2";
+}
+
+
+/* Header aur rows ke columns same rahenge */
+.donor-header,
+.donor-row {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr
+    1fr
+    1.2fr
+    1.2fr
+    1.2fr
+    0.8fr
+    0.7fr
+    0.6fr;
+
+  column-gap: 12px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.donor-header {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 20px;
+  padding: 20px 15px;
+}
+
+.header-id,
+.row-id {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-id input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.donor-row {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 28px;
+  padding: 15px;
+}
+
+.row-id input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Text ko column se bahar nikalne se rokein */
+.donor-header > span,
+.donor-row > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.row-action {
+  display: flex;
+  align-items: center;
+}
+
+.eye-icon {
+  width: 16px;
+  height: 16px;
+}
