@@ -14,7 +14,7 @@ function DonorProfile() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const user = location.state?.user;
+  const data = location.state?.data;
 
   const dropdownRef = useRef(null);
 
@@ -124,6 +124,52 @@ function DonorProfile() {
             </div>
 
             <h1 className="profile-content-heading">Details</h1>
+
+            <div className="donor-profile-card">
+              <div className="donor-profile-card-head">
+                <img src={profile} alt="Donor profile" />
+                <span>{data?.name}</span>
+              </div>
+              <div className="donor-profile-button">
+                <button className="donor-profile-btn btn1">Edit Donor</button>
+                <button className="donor-profile-btn btn2">
+                  Blocked Donor
+                </button>
+              </div>
+
+              <hr />
+
+              <div className="donor-profile-info">
+                <div className="donor-id-info">
+                  <span>ID</span>
+                  <span>{data?.id}</span>
+                </div>
+                <div className="donor-location-info">
+                  <span>Location</span>
+                  <span>{data?.Location}</span>
+                </div>
+                <div className="donor-availability-info">
+                  <span>Availability</span>
+                  <span>{data?.Availability}</span>
+                </div>
+                <div className="donor-blood_group-info">
+                  <span>Blood Group</span>
+                  <span>{data?.blood_Group}</span>
+                </div>
+                <div className="donor-verification-info">
+                  <span>Verification</span>
+                  <span>{data?.Verification}</span>
+                </div>
+                <div className="donor-donations-info">
+                  <span>Donations</span>
+                  <span>{data?.Donations}</span>
+                </div>
+                <div className="donor-rating-info">
+                  <span>Rating</span>
+                  <span>{data?.Rating}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

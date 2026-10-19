@@ -44,6 +44,16 @@ function Sidebar() {
             <img src={usersicon} alt="" className="donors-img-logo" />
             <span className="donors-nav-text">Donors Management</span>
           </NavLink>
+
+          <NavLink
+            to="/blood_request"
+            className={({ isActive }) =>
+              `donors-nav-link ${isActive ? "active" : ""}`
+            }
+          >
+            <img src={usersicon} alt="" className="donors-img-logo" />
+            <span className="donors-nav-text">Blood Request</span>
+          </NavLink>
         </nav>
       </aside>
     </>

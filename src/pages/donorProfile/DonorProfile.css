@@ -1,0 +1,108 @@
+
+
+
+.donor-profile-card {
+  width: 1094px;
+  height: 488px;
+  border: 0.5px solid #ffff;
+  border-radius: 28px;
+  margin: 20px;
+  padding: 20px 20px;
+}
+
+.donor-profile-card-head {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.donor-profile-card-head img{
+  width: 62px;
+  height: 62px;
+}
+
+.donor-profile-card-head span{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "baloo 2";
+  margin-top: 20px;
+}
+
+.donor-profile-button {
+  width: 236px;
+  height: 36px;
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "baloo 2";
+}
+
+.donor-profile-btn {
+  width: 112px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 99px;
+  color: white;
+}
+
+.btn1 {
+  background-color: #2D28C6;
+}
+.btn2 {
+  background-color: #C62828;
+  width: 125px;
+}
+
+.donor-profile-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+  padding: 24px 10px;
+  box-sizing: border-box;
+}
+
+.donor-id-info,
+.donor-location-info,
+.donor-availability-info,
+.donor-blood_group-info,
+.donor-verification-info,
+.donor-donations-info,
+.donor-rating-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  min-width: 0;
+  font-family: "baloo 2";
+}
+
+.donor-profile-info span:first-child {
+  font-size: 18px;
+  color: #777;
+  font-weight: 500;
+}
+
+.donor-profile-info span:last-child {
+  font-size: 18px;
+  color: #201f31;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .donor-profile-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .donor-profile-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+}

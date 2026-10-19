@@ -1,0 +1,172 @@
+
+
+
+/* =========================================
+   MAIN BLOOD REQUEST SECTION
+========================================= */
+
+.blood-request-section {
+  margin-left: 255px; /* Sidebar width + left spacing */
+  margin-top: 14px;
+  margin-right: 14px;
+  width: calc(100% - 269px);
+  min-height: calc(100vh - 28px);
+  box-sizing: border-box;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.blood-request-content {
+  width: 100%;
+  min-height: calc(100vh - 28px);
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 28px;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.blood-request-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.blood-request-header h1 {
+  margin: 0;
+  color: #000000;
+  font-family: "Baloo 2";
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 120%;
+}
+
+
+/* blood request search */
+.blood-request-header-search {
+  width: 320px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 99px;
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.blood-request-header-search input {
+  width: 100%;
+  height: 30px;
+  appearance: none;
+  outline: none;
+  font-family: "baloo 2";
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  color: #0E0E0E0A;
+}
+
+/* blood-request-head-dropdown */
+/* Blood Request Dropdown */
+
+.blood-request-head-dropdown {
+  width: 163px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 99px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.blood-request-head-dropdown-select {
+  height: 27px;
+  width: 130px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 99px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Baloo 2", sans-serif;
+  color: #201f31;
+  cursor: pointer;
+}
+
+
+/* blood request profile  */
+
+.blood-request-header-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.blood-request-wadget-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 99px;
+}
+.blood-request-profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1024px) {
+  .blood-request-section {
+    margin-left: 255px;
+    width: calc(100% - 269px);
+  }
+
+  .blood-request-content {
+    padding: 18px;
+  }
+
+  .blood-request-header h1 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+  .blood-request-section {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .blood-request-content {
+    min-height: calc(100vh - 20px);
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .blood-request-header h1 {
+    font-size: 22px;
+  }
+}
