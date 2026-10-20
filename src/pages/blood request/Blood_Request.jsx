@@ -3,12 +3,31 @@ import "./Blood_Request.css";
 import searchicon from "../../assets/searchicon.png";
 import wadge from "../../assets/wadget.png";
 import profile from "../../assets/profile.png";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import Cards from "../../components/blood_request_card/Card";
 
 function Blood_Request() {
   const [period, setPeriod] = useState("This Month");
+  const [isOpen, setIsOpen] = useState(false);
 
   const periodOptions = ["This Week", "This Month", "This Year"];
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <div>
@@ -19,44 +38,81 @@ function Blood_Request() {
             <div className="blood-request-header">
               <h1>Blood Request</h1>
 
-              {/* Blood Request Seach  */}
+              <div className="blood-request-header-right">
+                {/* Blood Request Search */}
+                <div className="blood-request-header-search">
+                  <img src={searchicon} alt="" className="search-icon" />
 
-              <div className="blood-request-header-search">
-                <img src={searchicon} alt="" className="search-icon" />
-                <input
-                  type="text"
-                  placeholder="search for users & events ..."
-                />
+                  <input
+                    type="text"
+                    placeholder="search for users & events ..."
+                  />
+                </div>
+
+                {/* Custom Dropdown */}
+                <div className="blood-request-head-dropdown" ref={dropdownRef}>
+                  <button
+                    type="button"
+                    className="blood-request-head-dropdown-select"
+                    onClick={() => setIsOpen((prev) => !prev)}
+                    aria-expanded={isOpen}
+                    aria-haspopup="listbox"
+                  >
+                    <span>{period}</span>
+
+                    <span
+                      className={`blood-request-period-arrow ${
+                        isOpen ? "open" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {isOpen && (
+                    <div
+                      className="blood-request-period-popup"
+                      role="listbox"
+                      aria-label="Select period"
+                    >
+                      {periodOptions.map((option) => (
+                        <button
+                          type="button"
+                          key={option}
+                          role="option"
+                          aria-selected={period === option}
+                          className={`blood-request-head-dropdown-option ${
+                            period === option ? "selected" : ""
+                          }`}
+                          onClick={() => {
+                            setPeriod(option);
+                            setIsOpen(false);
+                          }}
+                        >
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Profile frame */}
+                <div className="blood-request-header-profile">
+                  <img
+                    src={wadge}
+                    alt=""
+                    className="blood-request-wadget-icon"
+                  />
+
+                  <img
+                    src={profile}
+                    alt=""
+                    className="blood-request-profile-icon"
+                  />
+                </div>
               </div>
+            </div>
 
-              {/* Drop Down  */}
-              <div className="blood-request-head-dropdown">
-                <select
-                  name=""
-                  id=""
-                  value={period}
-                  onChange={(e) => setPeriod(e.target.value)}
-                  className="blood-request-head-dropdown-select"
-                >
-                  <option value="">Select an option</option>
-                  {periodOptions.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Profile frame  */}
-
-              <div className="blood-request-header-profile">
-                <img src={wadge} alt="" className="blood-request-wadget-icon" />
-                <img
-                  src={profile}
-                  alt=""
-                  className="blood-request-profile-icon"
-                />
-              </div>
+            <div className="blood-request-content-cards">
+              <Cards />
             </div>
           </div>
         </section>

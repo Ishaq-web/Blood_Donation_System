@@ -50,6 +50,12 @@
   line-height: 120%;
 }
 
+.blood-request-header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 
 /* blood request search */
 .blood-request-header-search {
@@ -69,42 +75,109 @@
   outline: none;
   font-family: "baloo 2";
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
 
 }
 
 .search-icon {
-  width: 25px;
-  height: 25px;
-  color: #0E0E0E0A;
+  width: 20px;
+  height: 27px;
+  object-fit: contain;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
 /* blood-request-head-dropdown */
-/* Blood Request Dropdown */
 
 .blood-request-head-dropdown {
   width: 163px;
   height: 48px;
   border: 1px solid black;
   border-radius: 99px;
-  padding: 10px 10px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
+  background-color: #ffffff;
+  flex-shrink: 0;
 }
 
 .blood-request-head-dropdown-select {
   height: 27px;
-  width: 130px;
+  width: 90%;
+  padding: 0 3px;
   border: none;
   outline: none;
   background-color: transparent;
-  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Baloo 2", sans-serif;
+  font-family: "Baloo 2";
   color: #201f31;
   cursor: pointer;
+}
+
+
+.blood-request-period-arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid #201f31;
+  border-bottom: 1.5px solid #201f31;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.blood-request-period-arrow.open {
+  transform: rotate(225deg);
+  margin-top: 4px;
+}
+
+
+.blood-request-period-popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(32, 31, 49, 0.12);
+  z-index: 1000;
+}
+
+.blood-request-head-dropdown-option {
+  width: 100%;
+  padding: 9px 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #201f31;
+  font-family: "Baloo 2";
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.blood-request-head-dropdown-option:hover {
+  background-color: #f2f1f8;
+}
+
+.blood-request-head-dropdown-option.selected {
+  background-color: #eeedf5;
+  font-weight: 600;
 }
 
 
@@ -129,7 +202,7 @@
 
 
 /* =========================================
-   TABLET RESPONSIVENESS
+  TABLET RESPONSIVENESS
 ========================================= */
 
 @media (max-width: 1024px) {
@@ -169,4 +242,13 @@
   .blood-request-header h1 {
     font-size: 22px;
   }
+}
+
+
+
+
+/* blood-request-content-cards  */
+
+.blood-request-content-cards {
+  margin-top: 50px;
 }
