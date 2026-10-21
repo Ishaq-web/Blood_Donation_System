@@ -5,6 +5,8 @@ import wadge from "../../assets/wadget.png";
 import profile from "../../assets/profile.png";
 import { useState, useRef, useEffect } from "react";
 import Cards from "../../components/blood_request_card/Card";
+import Dropdown from "../../components/blood_request_card/Dropdown";
+import Userlist from "../../components/blood_request_card/Userlist";
 
 function Blood_Request() {
   const [period, setPeriod] = useState("This Month");
@@ -113,6 +115,17 @@ function Blood_Request() {
 
             <div className="blood-request-content-cards">
               <Cards />
+            </div>
+
+            <div className="blood-request-content-dropdown">
+              <h1 className="blood-request-content-dropdown-title">
+                All Chats
+              </h1>
+              <Dropdown />
+            </div>
+
+            <div>
+              <Userlist />
             </div>
           </div>
         </section>
